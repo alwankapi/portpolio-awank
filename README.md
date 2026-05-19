@@ -50,8 +50,8 @@
 
 1. **Clone the repository**
 ```bash
-git clone <your-repo-url>
-cd portfolio-template
+git clone <https://github.com/alwankapi/portpolio-awank.git>
+cd portfolio-awank
 ```
 
 2. **Install dependencies**
