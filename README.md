@@ -220,8 +220,8 @@ Contributions, issues, and feature requests are welcome!
 
 If you have any questions or need help:
 
-- 📧 Email: your@email.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/portfolio-template/issues)
+- 📧 Email: alwankapi@gmail.com
+- 🐛 Issues: [GitHub Issues](https://github.com/alwankapi/portfolio-awank/issues)
 - 📖 Docs: [Documentation](DOCUMENTATION.md)
 
 ## ⭐ Show Your Support
@@ -230,4 +230,4 @@ Give a ⭐️ if this project helped you!
 
 ---
 
-**Made with ❤️ by [Your Name](https://github.com/yourusername)**
+**Made with ❤️ by [awank.dev](https://github.com/alwankapi)**
