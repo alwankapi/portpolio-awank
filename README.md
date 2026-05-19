@@ -1,58 +1,233 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎨 Portfolio Template
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> Modern, responsive portfolio website template built with Laravel 13 and Tailwind CSS 4
 
-## About Laravel
+[![Laravel](https://img.shields.io/badge/Laravel-13.7-FF2D20?style=flat&logo=laravel)](https://laravel.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com)
+[![Alpine.js](https://img.shields.io/badge/Alpine.js-3.15-8BC0D0?style=flat&logo=alpine.js)](https://alpinejs.dev)
+[![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?style=flat&logo=php)](https://php.net)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 🎯 **Modern Design** - Clean, professional interface with smooth animations
+- 🌓 **Dark/Light Mode** - Seamless theme switching with system preference detection
+- 📱 **Fully Responsive** - Perfect experience on all devices
+- ⚡ **Fast & Optimized** - Built with Vite for lightning-fast performance
+- 🎨 **Customizable** - Easy to customize colors, fonts, and content
+- 🔐 **Admin Panel** - Manage all content through intuitive dashboard
+- 📧 **Contact Form** - Integrated contact form with validation
+- 🎭 **Smooth Animations** - Engaging scroll animations and transitions
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 What's Included
 
-## Learning Laravel
+### Public Pages
+- Hero section with typewriter effect
+- About section with statistics
+- Skills showcase with categories
+- Projects portfolio grid
+- Experience timeline
+- Certificates display
+- Contact form
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Admin Panel
+- Dashboard with statistics
+- Projects management (CRUD)
+- Skills management (CRUD)
+- Experience management (CRUD)
+- Certificates management (CRUD)
+- Messages inbox
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Quick Start
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Prerequisites
 
-## Agentic Development
+- PHP >= 8.3
+- Composer
+- Node.js >= 18
+- MySQL or SQLite
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### Installation
 
+1. **Clone the repository**
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone <your-repo-url>
+cd portfolio-template
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+2. **Install dependencies**
+```bash
+composer install
+npm install
+```
 
-## Contributing
+3. **Setup environment**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Configure database**
 
-## Code of Conduct
+Edit `.env` file:
+```env
+DB_CONNECTION=mysql
+DB_DATABASE=portfolio
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Run migrations**
+```bash
+php artisan migrate
+```
 
-## Security Vulnerabilities
+6. **Create storage link**
+```bash
+php artisan storage:link
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Build assets**
+```bash
+npm run build
+```
 
-## License
+8. **Start development server**
+```bash
+composer run dev
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Visit `http://localhost:8000` 🎉
+
+## 👤 Create Admin User
+
+```bash
+php artisan tinker
+```
+
+```php
+User::create([
+    'name' => 'Admin',
+    'email' => 'admin@example.com',
+    'password' => bcrypt('password')
+]);
+```
+
+Login at: `http://localhost:8000/login`
+
+## 🎨 Customization
+
+### Change Theme Colors
+
+Edit `resources/css/app.css`:
+```css
+@theme {
+    --color-accent-500: #6366f1; /* Your brand color */
+}
+```
+
+### Update Hero Content
+
+Edit `resources/views/home.blade.php`:
+```blade
+<h1>
+    Hi, I'm <span class="text-gradient">Your Name</span>
+</h1>
+```
+
+### Add Custom Sections
+
+1. Create component in `resources/views/components/`
+2. Include in `home.blade.php`
+3. Add navigation link in navbar
+
+## 📦 Project Structure
+
+```
+portfolio-template/
+├── app/
+│   ├── Http/Controllers/     # Controllers
+│   ├── Models/               # Eloquent models
+│   └── Requests/             # Form validations
+├── database/
+│   └── migrations/           # Database schema
+├── resources/
+│   ├── css/                  # Styles
+│   ├── js/                   # JavaScript
+│   └── views/                # Blade templates
+├── routes/
+│   └── web.php               # Route definitions
+└── public/                   # Public assets
+```
+
+## 🚢 Deployment
+
+### Production Optimization
+
+```bash
+composer install --optimize-autoloader --no-dev
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+npm run build
+```
+
+### Deploy to Shared Hosting
+
+1. Upload all files except `node_modules` and `.git`
+2. Point document root to `public` folder
+3. Import database
+4. Set environment variables
+5. Run `php artisan storage:link`
+
+### Deploy to VPS
+
+See [DOCUMENTATION.md](DOCUMENTATION.md) for detailed VPS deployment guide.
+
+## 📚 Documentation
+
+For detailed documentation, see [DOCUMENTATION.md](DOCUMENTATION.md)
+
+Topics covered:
+- Complete installation guide
+- Configuration options
+- Admin panel usage
+- Customization guide
+- Deployment strategies
+- Troubleshooting
+
+## 🛠 Built With
+
+- [Laravel 13](https://laravel.com) - PHP Framework
+- [Tailwind CSS 4](https://tailwindcss.com) - CSS Framework
+- [Alpine.js 3](https://alpinejs.dev) - JavaScript Framework
+- [Vite 8](https://vitejs.dev) - Build Tool
+
+## 📝 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 💬 Support
+
+If you have any questions or need help:
+
+- 📧 Email: your@email.com
+- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/portfolio-template/issues)
+- 📖 Docs: [Documentation](DOCUMENTATION.md)
+
+## ⭐ Show Your Support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+**Made with ❤️ by [Your Name](https://github.com/yourusername)**
