@@ -50,7 +50,7 @@
 
 1. **Clone the repository**
 ```bash
-git clone <https://github.com/alwankapi/portpolio-awank.git>
+git clone https://github.com/alwankapi/portpolio-awank.git
 cd portfolio-awank
 ```
 
@@ -98,41 +98,6 @@ composer run dev
 
 Visit `http://localhost:8000` 🎉
 
-## 👤 Create Admin User
-
-```bash
-php artisan tinker
-```
-
-```php
-User::create([
-    'name' => 'Admin',
-    'email' => 'admin@example.com',
-    'password' => bcrypt('password')
-]);
-```
-
-Login at: `http://localhost:8000/login`
-
-## 🎨 Customization
-
-### Change Theme Colors
-
-Edit `resources/css/app.css`:
-```css
-@theme {
-    --color-accent-500: #6366f1; /* Your brand color */
-}
-```
-
-### Update Hero Content
-
-Edit `resources/views/home.blade.php`:
-```blade
-<h1>
-    Hi, I'm <span class="text-gradient">Your Name</span>
-</h1>
-```
 
 ### Add Custom Sections
 
